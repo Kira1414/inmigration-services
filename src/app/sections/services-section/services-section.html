@@ -1,0 +1,57 @@
+<section id="servicios" class="bg-surface py-24">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div class="max-w-2xl">
+        <span class="mb-2 block font-label text-sm uppercase tracking-widest text-secondary">Nuestra Experiencia</span>
+        <h2 class="font-headline text-4xl font-extrabold tracking-tight text-primary md:text-5xl">Especialidades Migratorias</h2>
+        <div class="mt-4 h-1.5 w-24 bg-secondary"></div>
+      </div>
+      <p class="max-w-sm font-body leading-relaxed text-on-surface-variant">
+        Brindamos asesoria integral para que su proceso sea transparente, rapido y exitoso ante las autoridades competentes.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-12">
+      <div class="md:col-span-8">
+        <app-service-card
+          [icon]="cards.featured.icon"
+          [title]="cards.featured.title"
+          [description]="cards.featured.description"
+          [bullets]="cards.featured.bullets"
+          variant="featured"
+        />
+      </div>
+      <div class="md:col-span-4">
+        <app-service-card
+          [icon]="cards.highlight.icon"
+          [title]="cards.highlight.title"
+          [description]="cards.highlight.description"
+          variant="highlight"
+          linkLabel="Ver detalle"
+          linkHref="/servicios"
+        />
+      </div>
+      @for (service of cards.standard; track service.title) {
+        <div class="md:col-span-4">
+          <app-service-card
+            [icon]="service.icon"
+            [title]="service.title"
+            [description]="service.description"
+            variant="standard"
+            linkLabel="Conocer mas"
+            linkHref="/servicios"
+          />
+        </div>
+      }
+      @for (service of cards.wide; track service.title) {
+        <div class="md:col-span-6">
+          <app-service-card
+            [icon]="service.icon"
+            [title]="service.title"
+            [description]="service.description"
+            variant="wide"
+          />
+        </div>
+      }
+    </div>
+  </div>
+</section>

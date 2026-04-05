@@ -1,0 +1,61 @@
+@switch (variant()) {
+  @case ('featured') {
+    <div class="group rounded-xl border-l-4 border-secondary bg-surface-container-lowest p-8 shadow-sm transition-shadow hover:shadow-md">
+      <div class="flex flex-col items-start gap-8 md:flex-row">
+        <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-primary/5 transition-colors group-hover:bg-primary">
+          <span class="material-symbols-outlined text-4xl text-primary group-hover:text-white">{{ icon() }}</span>
+        </div>
+        <div>
+          <h3 class="mb-3 text-2xl font-bold text-primary">{{ title() }}</h3>
+          <p class="mb-6 leading-relaxed text-on-surface-variant">{{ description() }}</p>
+          @if (bullets().length) {
+            <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              @for (bullet of bullets(); track bullet) {
+                <li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-base text-secondary">check_circle</span>{{ bullet }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </div>
+    </div>
+  }
+  @case ('highlight') {
+    <div class="group rounded-xl bg-primary-container p-8 text-white transition-transform hover:scale-[1.02]">
+      <span class="material-symbols-outlined mb-4 block text-4xl text-secondary-fixed">{{ icon() }}</span>
+      <h3 class="mb-3 text-2xl font-bold">{{ title() }}</h3>
+      <p class="mb-6 text-sm leading-relaxed text-slate-300">{{ description() }}</p>
+      @if (linkHref() && linkLabel()) {
+        <a class="flex items-center gap-2 font-bold text-secondary-fixed transition-all group-hover:gap-4" [routerLink]="linkHref()">
+          {{ linkLabel() }}
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      }
+    </div>
+  }
+  @case ('wide') {
+    <div class="flex items-center gap-6 rounded-xl bg-surface-container-low p-8">
+      <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white">
+        <span class="material-symbols-outlined text-3xl text-primary">{{ icon() }}</span>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-primary">{{ title() }}</h3>
+        <p class="text-sm text-on-surface-variant">{{ description() }}</p>
+      </div>
+    </div>
+  }
+  @default {
+    <div class="flex h-full flex-col justify-between rounded-xl border-l-4 border-secondary bg-surface-container-lowest p-6 shadow-sm">
+      <div>
+        <span class="material-symbols-outlined mb-4 block text-primary">{{ icon() }}</span>
+        <h3 class="mb-2 font-bold text-primary">{{ title() }}</h3>
+        <p class="text-sm text-on-surface-variant">{{ description() }}</p>
+      </div>
+      @if (linkHref() && linkLabel()) {
+        <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3" [routerLink]="linkHref()">
+          {{ linkLabel() }}
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      }
+    </div>
+  }
+}
