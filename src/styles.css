@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-tertiary-fixed: #d8e2ff;
@@ -50,7 +50,7 @@
   --color-tertiary-container: #042b5f;
   --font-headline: Manrope, sans-serif;
   --font-body: Inter, sans-serif;
-  --font-label: "Public Sans", sans-serif;
+  --font-label: 'Public Sans', sans-serif;
   --radius-lg: 0.25rem;
   --radius-xl: 0.5rem;
   --radius-full: 0.75rem;
@@ -71,8 +71,24 @@ a {
   color: inherit;
 }
 
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:hover,
+.cta-button:active {
+  color: #fff !important;
+}
+
+.cta-button .material-symbols-outlined {
+  color: #fff !important;
+}
+
 .material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 }
 
 .text-shadow-sm {
