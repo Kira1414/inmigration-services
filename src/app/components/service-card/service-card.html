@@ -1,6 +1,6 @@
 @switch (variant()) {
   @case ('featured') {
-    <div class="group rounded-xl border-l-4 border-secondary bg-surface-container-lowest p-8 shadow-sm transition-shadow hover:shadow-md">
+    <div class="group rounded-2xl border border-slate-200 border-l-4 border-l-secondary bg-surface-container-lowest p-8 shadow-sm transition-shadow hover:shadow-lg">
       <div class="flex flex-col items-start gap-8 md:flex-row">
         <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-primary/5 transition-colors group-hover:bg-primary">
           <span class="material-symbols-outlined text-4xl text-primary group-hover:text-white">{{ icon() }}</span>
@@ -20,12 +20,12 @@
     </div>
   }
   @case ('highlight') {
-    <div class="group rounded-xl bg-primary-container p-8 text-white transition-transform hover:scale-[1.02]">
-      <span class="material-symbols-outlined mb-4 block text-4xl text-secondary-fixed">{{ icon() }}</span>
+    <div class="group rounded-2xl bg-primary-container p-8 text-white shadow-xl shadow-primary/10 transition-transform hover:-translate-y-1">
+      <span class="material-symbols-outlined mb-4 block text-4xl text-secondary-container">{{ icon() }}</span>
       <h3 class="mb-3 text-2xl font-bold">{{ title() }}</h3>
       <p class="mb-6 text-sm leading-relaxed text-slate-300">{{ description() }}</p>
       @if (linkHref() && linkLabel()) {
-        <a class="flex items-center gap-2 font-bold text-secondary-fixed transition-all group-hover:gap-4" [routerLink]="linkHref()">
+        <a class="flex items-center gap-2 font-bold text-secondary-container transition-all group-hover:gap-4" [routerLink]="linkHref()">
           {{ linkLabel() }}
           <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
@@ -33,8 +33,8 @@
     </div>
   }
   @case ('wide') {
-    <div class="flex items-center gap-6 rounded-xl bg-surface-container-low p-8">
-      <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white">
+    <div class="flex items-center gap-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary/5">
         <span class="material-symbols-outlined text-3xl text-primary">{{ icon() }}</span>
       </div>
       <div>
@@ -44,7 +44,7 @@
     </div>
   }
   @default {
-    <div class="flex h-full flex-col justify-between rounded-xl border-l-4 border-secondary bg-surface-container-lowest p-6 shadow-sm">
+    <div class="flex h-full flex-col justify-between rounded-2xl border border-slate-200 border-l-4 border-l-secondary bg-surface-container-lowest p-6 shadow-sm transition-shadow hover:shadow-lg">
       <div>
         <span class="material-symbols-outlined mb-4 block text-primary">{{ icon() }}</span>
         <h3 class="mb-2 font-bold text-primary">{{ title() }}</h3>
