@@ -1,4 +1,4 @@
-<section class="relative flex min-h-[880px] items-center overflow-hidden bg-primary">
+<section class="relative overflow-hidden bg-primary py-16 md:py-20 lg:min-h-[880px]">
   <div class="absolute inset-0 z-0">
     <img
       alt="Horizonte de New York para servicios migratorios en Estados Unidos"
@@ -11,7 +11,7 @@
     <div class="absolute -right-10 top-48 h-56 w-56 rounded-full border border-secondary-container/30"></div>
   </div>
   <div
-    class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-12"
+    class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-12 lg:pt-12"
   >
     <div class="lg:col-span-7">
       <div
@@ -35,16 +35,37 @@
         <span class="font-bold text-secondary-container">Alcance claro:</span>
         nuestro enfoque es el acompanamiento migratorio y de visado cuando existe una situacion legal documentable. Los temas personales, ceremoniales o decisiones de pareja corresponden al ambito privado del cliente.
       </div>
+      <div class="mb-10 rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md lg:hidden">
+        <div class="mb-4 flex items-center justify-between gap-4">
+          <div>
+            <p class="font-label text-xs font-bold uppercase tracking-[0.24em] text-secondary-container">USA Visa Guidance</p>
+            <p class="mt-1 font-headline text-2xl font-bold text-white">Evaluacion migratoria</p>
+          </div>
+          <div class="shrink-0 overflow-hidden rounded-md border border-white/30 shadow-lg" aria-label="Bandera estilizada de Estados Unidos">
+            <div class="flex h-9 w-14">
+              <div class="w-6 bg-primary p-1">
+                <div class="grid grid-cols-3 gap-0.5">
+                  @for (star of [1,2,3,4,5,6]; track star) {
+                    <span class="h-0.5 w-0.5 rounded-full bg-white"></span>
+                  }
+                </div>
+              </div>
+              <div class="flex-1 bg-[repeating-linear-gradient(to_bottom,#b31942_0_4px,#ffffff_4px_8px)]"></div>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-200">Una guia clara para entender requisitos, evidencia y proximos pasos antes de presentar su caso.</p>
+      </div>
       <div class="flex flex-col gap-4 sm:flex-row">
         <a
-          class="cta-button flex items-center justify-center gap-2 rounded-xl bg-secondary px-8 py-4 text-lg font-bold shadow-xl shadow-red-950/20 transition-all hover:-translate-y-1 hover:bg-[#931434]"
+          class="cta-button flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-secondary px-8 py-4 text-lg font-bold shadow-xl shadow-red-950/20 transition-all hover:-translate-y-1 hover:bg-[#931434] focus:outline-none focus:ring-2 focus:ring-secondary-container focus:ring-offset-2 focus:ring-offset-primary"
           href="#contacto"
         >
           Agendar evaluacion
           <span class="material-symbols-outlined text-white">arrow_forward</span>
         </a>
         <a
-          class="flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-md transition-all hover:bg-white/20"
+          class="flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
           href="https://wa.me/13473700823"
         >
           <span class="material-symbols-outlined">chat</span>
@@ -56,30 +77,26 @@
       <div class="relative ml-auto max-w-md rounded-[2rem] border border-white/20 bg-white/12 p-6 text-white shadow-2xl shadow-black/30 backdrop-blur-xl">
         <div class="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-secondary-container/30 blur-2xl"></div>
         <div class="relative overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-          <div class="grid h-40 grid-cols-12">
-            <div class="col-span-5 bg-primary p-4">
-              <div class="grid grid-cols-5 gap-1">
-                @for (star of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; track star) {
-                  <span class="h-1.5 w-1.5 rounded-full bg-white/90"></span>
-                }
+          <div class="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,#b31942_0_28%,#ffffff_28%_34%,#071b46_34%_66%,#ffffff_66%_72%,#b31942_72%_100%)]"></div>
+          <div class="bg-white p-6 text-primary">
+            <div class="mb-6 flex items-start justify-between gap-6 pt-4">
+              <div>
+                <p class="font-label text-xs font-bold uppercase tracking-[0.28em] text-secondary">United States Visa Guidance</p>
+                <h2 class="mt-2 font-headline text-3xl font-bold leading-tight">Evaluacion migratoria con enfoque profesional</h2>
+              </div>
+              <div class="shrink-0 overflow-hidden rounded-lg border border-slate-200 shadow-md" aria-label="Bandera estilizada de Estados Unidos">
+                <div class="flex h-12 w-20">
+                  <div class="w-8 bg-primary p-1.5">
+                    <div class="grid grid-cols-4 gap-0.5">
+                      @for (star of [1,2,3,4,5,6,7,8,9,10,11,12]; track star) {
+                        <span class="h-1 w-1 rounded-full bg-white"></span>
+                      }
+                    </div>
+                  </div>
+                  <div class="flex-1 bg-[repeating-linear-gradient(to_bottom,#b31942_0_5px,#ffffff_5px_10px)]"></div>
+                </div>
               </div>
             </div>
-            <div class="col-span-7">
-              <div class="h-4 bg-secondary"></div>
-              <div class="h-4 bg-white"></div>
-              <div class="h-4 bg-secondary"></div>
-              <div class="h-4 bg-white"></div>
-              <div class="h-4 bg-secondary"></div>
-              <div class="h-4 bg-white"></div>
-              <div class="h-4 bg-secondary"></div>
-              <div class="h-4 bg-white"></div>
-              <div class="h-4 bg-secondary"></div>
-              <div class="h-4 bg-white"></div>
-            </div>
-          </div>
-          <div class="bg-white p-6 text-primary">
-            <p class="font-label text-xs font-bold uppercase tracking-[0.28em] text-secondary">United States Visa Guidance</p>
-            <h2 class="mt-2 font-headline text-3xl font-bold leading-tight">Evaluacion migratoria con enfoque profesional</h2>
             <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
               <div class="rounded-xl bg-slate-100 p-3">
                 <p class="font-bold">Visas</p>
@@ -99,8 +116,8 @@
       </div>
     </div>
   </div>
-  <div class="absolute bottom-12 left-0 right-0 z-20 hidden md:block">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-8 px-6">
+  <div class="relative z-10 mx-auto mt-14 hidden max-w-7xl px-6 md:block lg:mt-16">
+    <div class="flex items-center justify-between gap-8">
       <div
         class="flex flex-1 items-center gap-4 rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md"
       >

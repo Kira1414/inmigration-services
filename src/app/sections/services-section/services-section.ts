@@ -48,6 +48,11 @@ export class ServicesSectionComponent {
         icon: 'payments',
         title: 'ITIN & Taxes',
         description: 'Orientacion para numero de identificacion fiscal y declaracion de impuestos federales con criterio responsable.'
+      },
+      {
+        icon: 'airport_shuttle',
+        title: 'Transporte privado y empresarial',
+        description: 'Traslados ejecutivos desde aeropuertos de New York hacia Manhattan para viajeros, familias y equipos corporativos con reserva previa.'
       }
     ]
   };

@@ -25,7 +25,7 @@
       <h3 class="mb-3 text-2xl font-bold">{{ title() }}</h3>
       <p class="mb-6 text-sm leading-relaxed text-slate-300">{{ description() }}</p>
       @if (linkHref() && linkLabel()) {
-        <a class="flex items-center gap-2 font-bold text-secondary-container transition-all group-hover:gap-4" [routerLink]="linkHref()">
+        <a class="flex cursor-pointer items-center gap-2 font-bold text-secondary-container transition-all group-hover:gap-4 focus:outline-none focus:ring-2 focus:ring-secondary-container focus:ring-offset-2 focus:ring-offset-primary" [routerLink]="linkHref()">
           {{ linkLabel() }}
           <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
@@ -51,7 +51,7 @@
         <p class="text-sm text-on-surface-variant">{{ description() }}</p>
       </div>
       @if (linkHref() && linkLabel()) {
-        <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3" [routerLink]="linkHref()">
+        <a class="mt-6 inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" [routerLink]="linkHref()">
           {{ linkLabel() }}
           <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
