@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { CtaBannerComponent } from '../../components/cta-banner/cta-banner';
 import { ServiceCardComponent } from '../../components/service-card/service-card';
@@ -13,12 +14,33 @@ import { TopNavComponent } from '../../sections/top-nav/top-nav';
   styleUrl: './services-page.css'
 })
 export class ServicesPageComponent {
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+
+  constructor() {
+    this.title.setTitle('Servicios Migratorios en NYC | Visa F1, B2, Green Card e ITIN');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'Servicios migratorios en New York: cambio de estatus B2 a F1, extension de visa B2, ajuste por matrimonio, Green Card, permiso de trabajo, ciudadania e ITIN.'
+    });
+    this.meta.updateTag({
+      property: 'og:title',
+      content: 'Servicios Migratorios en NYC | Visa F1, B2, Green Card e ITIN'
+    });
+    this.meta.updateTag({
+      property: 'og:description',
+      content:
+        'Conozca opciones para visa F1, visa B2, cambio de estatus, residencia, permisos de trabajo, ciudadania e ITIN en New York.'
+    });
+  }
+
   protected readonly services = [
     {
       icon: 'swap_horiz',
-      title: 'Cambio de status',
-      description: 'Estrategia y preparacion documental para cambios B2/F1, F1/F2 y otros escenarios compatibles.',
-      bullets: ['Evaluacion de elegibilidad', 'Recoleccion documental', 'Presentacion y seguimiento USCIS']
+      title: 'Cambio de estatus B2 a F1',
+      description: 'Estrategia y preparacion documental para cambio de estatus de visa B2 a visa F1, F1/F2 y otros escenarios compatibles ante USCIS.',
+      bullets: ['Evaluacion de elegibilidad', 'Formulario I-539', 'Evidencia y seguimiento USCIS']
     },
     {
       icon: 'favorite',
@@ -29,8 +51,8 @@ export class ServicesPageComponent {
     {
       icon: 'history',
       title: 'Extension de visa B2',
-      description: 'Solicitud de extension para mantener estancia legal mientras se resuelven necesidades personales o familiares.',
-      bullets: ['Analisis de tiempos', 'Redaccion de soporte', 'Control de vencimientos']
+      description: 'Solicitud de extension de visa B2 para visitantes que necesitan mas tiempo de estadia legal por razones personales, familiares o de viaje.',
+      bullets: ['Analisis de tiempos', 'Carta de soporte', 'Control de vencimientos']
     },
     {
       icon: 'badge',
