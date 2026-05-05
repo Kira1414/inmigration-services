@@ -49,11 +49,62 @@
             [icon]="service.icon"
             [title]="service.title"
             [description]="service.description"
+            [bullets]="service.bullets"
             variant="wide"
           />
         </div>
       }
     </div>
+
+    <div class="mt-10 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+      <div class="grid gap-0 lg:grid-cols-[0.9fr_1.4fr]">
+        <div class="bg-primary p-8 text-white md:p-10">
+          <span class="mb-3 inline-flex items-center rounded-full bg-white/10 px-3 py-1 font-label text-xs uppercase tracking-widest text-secondary-container">
+            Transporte 24/7
+          </span>
+          <h3 class="font-headline text-3xl font-bold md:text-4xl">Traslados privados desde aeropuertos</h3>
+          <p class="mt-4 leading-relaxed text-slate-200">
+            Servicio VIP para llegadas y salidas entre JFK, LaGuardia, Newark, Manhattan y New York. Vehiculos limpios, conductores profesionales y reserva anticipada con respaldo de Mytrip Car Services Corp.
+          </p>
+          <p class="mt-6 text-sm font-bold text-secondary-container">
+            Reserve con anticipacion y no se preocupe por su llegada a New York.
+          </p>
+        </div>
+
+        <div class="p-6 md:p-8">
+          <div class="grid gap-4 md:grid-cols-3">
+            @for (vehicle of transport.vehicles; track vehicle.type) {
+              <article class="rounded-2xl border border-slate-200 bg-surface-container-lowest p-5">
+                <div class="mb-4 flex h-32 items-center justify-center overflow-hidden rounded-2xl bg-primary/5">
+                  <img
+                    class="h-full w-full object-contain p-3"
+                    [src]="vehicle.image"
+                    [alt]="vehicle.type + ' de referencia para transporte privado'"
+                  >
+                </div>
+                <h4 class="text-lg font-bold text-primary">{{ vehicle.type }}</h4>
+                <p class="text-sm text-on-surface-variant">Referencia: {{ vehicle.reference }}</p>
+                <dl class="mt-4 space-y-2">
+                  @for (airport of transport.airports; track airport.key) {
+                    <div class="flex items-center justify-between gap-3 border-t border-slate-200 pt-2">
+                      <dt>
+                        <span class="block text-sm font-bold text-primary">{{ airport.name }}</span>
+                        <span class="text-xs text-on-surface-variant">{{ airport.description }}</span>
+                      </dt>
+                      <dd class="text-lg font-black text-secondary">{{ vehicle.prices[airport.key] }}</dd>
+                    </div>
+                  }
+                </dl>
+              </article>
+            }
+          </div>
+          <p class="mt-4 text-xs leading-relaxed text-on-surface-variant">
+            Tarifas de referencia para traslado aeropuerto / Manhattan / aeropuerto. El precio final puede variar segun ruta exacta, horario, espera o requerimientos especiales.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div id="testimonios" class="mt-20 grid grid-cols-1 gap-6 lg:grid-cols-3">
       <div class="rounded-2xl bg-primary p-8 text-white lg:col-span-1">
         <span class="mb-3 block font-label text-xs uppercase tracking-widest text-secondary-container">Confianza comprobable</span>

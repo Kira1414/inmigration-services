@@ -1,6 +1,22 @@
 import { Component } from '@angular/core';
 import { ServiceCardComponent } from '../../components/service-card/service-card';
 
+type AirportKey = 'jfk' | 'lga' | 'newark';
+
+interface TransportAirport {
+  readonly key: AirportKey;
+  readonly name: string;
+  readonly description: string;
+}
+
+interface TransportVehicle {
+  readonly type: string;
+  readonly reference: string;
+  readonly image: string;
+  readonly icon: string;
+  readonly prices: Record<AirportKey, string>;
+}
+
 @Component({
   selector: 'app-services-section',
   standalone: true,
@@ -42,18 +58,52 @@ export class ServicesSectionComponent {
       {
         icon: 'public',
         title: 'Ciudadania Americana',
-        description: 'Preparacion para el proceso de naturalizacion, examen civico y entrevista con enfoque claro y ordenado.'
+        description: 'Preparacion para el proceso de naturalizacion, examen civico y entrevista con enfoque claro y ordenado.',
+        bullets: []
       },
       {
         icon: 'payments',
         title: 'ITIN & Taxes',
-        description: 'Orientacion para numero de identificacion fiscal y declaracion de impuestos federales con criterio responsable.'
+        description: 'Orientacion para numero de identificacion fiscal y declaracion de impuestos federales con criterio responsable.',
+        bullets: []
       },
       {
         icon: 'airport_shuttle',
         title: 'Transporte privado y empresarial',
-        description: 'Traslados ejecutivos desde aeropuertos de New York hacia Manhattan para viajeros, familias y equipos corporativos con reserva previa.'
+        description: 'Servicio VIP 24/7 para traslados entre aeropuertos, Manhattan y New York. Vehiculos limpios, conductores profesionales y reserva anticipada con respaldo de Mytrip Car Services Corp.',
+        bullets: ['JFK desde $80', 'LaGuardia desde $75', 'Newark desde $85']
       }
     ]
+  };
+
+  protected readonly transport = {
+    airports: [
+      { key: 'jfk', name: 'JFK', description: 'John F. Kennedy' },
+      { key: 'lga', name: 'LGA', description: 'LaGuardia' },
+      { key: 'newark', name: 'Newark', description: 'Newark, NJ' }
+    ] satisfies readonly TransportAirport[],
+    vehicles: [
+      {
+        type: 'Sedan',
+        reference: 'Audi A3 o similar',
+        image: '/transport/sedan.png',
+        icon: 'directions_car',
+        prices: { jfk: '$80', lga: '$75', newark: '$85' }
+      },
+      {
+        type: 'Minivan',
+        reference: 'Toyota Sienna o similar',
+        image: '/transport/minivan.png',
+        icon: 'airport_shuttle',
+        prices: { jfk: '$90', lga: '$85', newark: '$95' }
+      },
+      {
+        type: 'SUV',
+        reference: 'Cadillac Escalade o similar',
+        image: '/transport/suv.png',
+        icon: 'directions_car_filled',
+        prices: { jfk: '$100', lga: '$90', newark: '$110' }
+      }
+    ] satisfies readonly TransportVehicle[]
   };
 }
