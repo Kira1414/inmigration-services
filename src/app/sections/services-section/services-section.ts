@@ -28,49 +28,49 @@ export class ServicesSectionComponent {
   protected readonly cards = {
     featured: {
       icon: 'swap_horiz',
-      title: 'Cambio de status (B2/F1 - F1/F2)',
-      description: 'Analisis de elegibilidad, preparacion documental y acompanamiento para transiciones de estatus como estudiante, dependiente o visitante sin salir del pais.',
-      bullets: ['Revision de Formularios I-539', 'Organizacion de evidencia', 'Asesoria institucional']
+      title: 'Cambio de estatus (B2/F1 - F1/F2)',
+      description: 'Análisis de elegibilidad, preparación documental y acompañamiento para transiciones de estatus como estudiante, dependiente o visitante sin salir del país.',
+      bullets: ['Revisión de Formularios I-539', 'Organización de evidencia', 'Asesoría institucional']
     },
     highlight: {
       icon: 'fact_check',
       title: 'Procesos familiares documentados',
-      description: 'Acompanamiento migratorio cuando existe una relacion o situacion familiar real y documentable, con enfoque en requisitos, formularios y evidencia para el proceso de visado.'
+      description: 'Acompañamiento migratorio cuando existe una relación o situación familiar real y documentable, con enfoque en requisitos, formularios y evidencia para el proceso de visado.'
     },
     standard: [
       {
         icon: 'history',
-        title: 'Extension de Visa B2',
-        description: 'Preparacion responsable para solicitar mas tiempo de estadia temporal en EE.UU. segun su situacion y evidencia.'
+        title: 'Extensión de Visa B2',
+        description: 'Preparación responsable para solicitar más tiempo de estadía temporal en EE.UU. según su situación y evidencia.'
       },
       {
         icon: 'badge',
-        title: 'Renovacion de Green Card',
-        description: 'Guia para renovar su residencia permanente, revisar fechas clave y evitar interrupciones innecesarias.'
+        title: 'Renovación de Green Card',
+        description: 'Guía para renovar su residencia permanente, revisar fechas clave y evitar interrupciones innecesarias.'
       },
       {
         icon: 'work',
         title: 'Permiso de Trabajo',
-        description: 'Revision de requisitos y preparacion para solicitudes de autorizacion de empleo cuando corresponda.'
+        description: 'Revisión de requisitos y preparación para solicitudes de autorización de empleo cuando corresponda.'
       }
     ],
     wide: [
       {
         icon: 'public',
-        title: 'Ciudadania Americana',
-        description: 'Preparacion para el proceso de naturalizacion, examen civico y entrevista con enfoque claro y ordenado.',
+        title: 'Ciudadanía Americana',
+        description: 'Preparación para el proceso de naturalización, examen cívico y entrevista con enfoque claro y ordenado.',
         bullets: []
       },
       {
         icon: 'payments',
         title: 'ITIN & Taxes',
-        description: 'Orientacion para numero de identificacion fiscal y declaracion de impuestos federales con criterio responsable.',
+        description: 'Orientación para número de identificación fiscal y declaración de impuestos federales con criterio responsable.',
         bullets: []
       },
       {
         icon: 'airport_shuttle',
         title: 'Transporte privado y empresarial',
-        description: 'Servicio VIP 24/7 para traslados entre aeropuertos, Manhattan y New York. Vehiculos limpios, conductores profesionales y reserva anticipada con respaldo de Mytrip Car Services Corp.',
+        description: 'Servicio VIP 24/7 para traslados entre aeropuertos, Manhattan y New York. Vehículos limpios, conductores profesionales y reserva anticipada con respaldo de Mytrip Car Services Corp.',
         bullets: ['JFK desde $80', 'LaGuardia desde $75', 'Newark desde $85']
       }
     ]

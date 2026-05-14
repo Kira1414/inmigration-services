@@ -26,20 +26,20 @@ export class LandingPageComponent {
   private readonly meta = inject(Meta);
 
   constructor() {
-    this.title.setTitle('Asesoria Migratoria en NYC | Visas F1, B2, Green Card y Ciudadania');
+    this.title.setTitle('Asesoría Migratoria en NYC | Visas F1, B2, Green Card y Ciudadanía');
     this.meta.updateTag({
       name: 'description',
       content:
-        'Asesoria migratoria en New York para visas F1, B2, cambio de estatus, extension de visa, Green Card, permiso de trabajo, ciudadania e ITIN.'
+        'Asesoría migratoria en New York para visas F1, B2, cambio de estatus, extensión de visa, Green Card, permiso de trabajo, ciudadanía e ITIN.'
     });
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Asesoria Migratoria en NYC | Visas F1, B2, Green Card y Ciudadania'
+      content: 'Asesoría Migratoria en NYC | Visas F1, B2, Green Card y Ciudadanía'
     });
     this.meta.updateTag({
       property: 'og:description',
       content:
-        'Orientacion profesional para visas F1, B2, cambio de estatus, Green Card, permisos de trabajo, ciudadania e ITIN en New York.'
+        'Orientación profesional para visas F1, B2, cambio de estatus, Green Card, permisos de trabajo, ciudadanía e ITIN en New York.'
     });
   }
 }
