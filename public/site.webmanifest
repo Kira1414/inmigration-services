@@ -1,0 +1,25 @@
+{
+  "name": "Soluciones Migratorias NYC",
+  "short_name": "Migratorias NYC",
+  "description": "Asesoría migratoria en New York para visas F1, B2, Green Card, permiso de trabajo, ciudadanía e ITIN.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#071b46",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
